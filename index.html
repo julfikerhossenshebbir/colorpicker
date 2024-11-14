@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Color Picker</title>
+    <title>Color Picker and Saver</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css"> <!-- 'classic', 'monolith', 'nano' -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="color-picker-wrapper">
-    <button id="color-picker-button">Pick a Color</button>
-    <p id="colorCode">Selected Color: #000000</p>
-    <div id="savedColors" class="saved-colors-container">
-        <!-- Saved colors will be displayed here -->
+        <h1>Color Picker Tool</h1>
+        <p>Pick a color and save it to see its code and preview. Click on any saved color to copy the color code!</p>
+        <button id="color-picker-button">Pick a Color</button>
+        <p id="colorCode">Selected Color: #000000</p>
+        <div id="savedColors" class="saved-colors-container">
+            <h2>Saved Colors:</h2>
+            <!-- Saved colors will be displayed here -->
+            <p class="instruction">Click on a color to copy its code</p>
+        </div>
     </div>
-</div>
     <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
     <script src="script.js"></script>
 </body>
