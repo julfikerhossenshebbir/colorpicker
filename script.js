@@ -48,11 +48,11 @@ pickr.on('save', (color) => {
 
     // Append the color preview to the saved colors section
     document.getElementById('savedColors').appendChild(colorPreview);
+    pickr.hide();
 });
 
 // Handle click on saved color preview to copy the color code
 document.getElementById('savedColors').addEventListener('click', (event) => {
-    // Check if the clicked element is a color preview
     if (event.target.classList.contains('color-preview')) {
         const colorCode = event.target.textContent;
         
@@ -63,9 +63,4 @@ document.getElementById('savedColors').addEventListener('click', (event) => {
             console.error('Failed to copy color code: ', err);
         });
     }
-});
-
-// Optional: Close the color picker after saving
-pickr.on('save', () => {
-    pickr.hide();
 });
