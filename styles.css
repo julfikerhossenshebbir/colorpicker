@@ -1,12 +1,23 @@
 body {
+    font-family: 'Roboto Slab', sans-serif;
+    background: linear-gradient(45deg, #6A8D92, #3E4A56, #5C758E, #A2B9B8);
+    background-size: 200% 200%;
+    animation: waterAnimation 2.5s infinite alternate;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f7f7f7;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+@keyframes waterAnimation {
+    0% { background-position: 0% 0%; }
+    25% { background-position: 50% 25%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 75%; }
+    100% { background-position: 0% 100%; }
 }
 
 .color-picker-wrapper {
